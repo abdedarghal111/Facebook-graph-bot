@@ -29,7 +29,6 @@ accounts = userFB.user.get_accounts(user_id=user.id)
 page = accounts.data[0]
 print(page)
 
-print(pageFB.get_object(object_id=f"{page.id}/posts"))
 # graph.get_full_connections(page.id)
-# posts = fb.page.get_posts(object_id=page.id)
-# print(posts)
+posts = pageFB.page.get_posts(object_id=page.id)
+print(posts)

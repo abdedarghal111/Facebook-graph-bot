@@ -49,6 +49,8 @@ switch $argv[1]
     case "--init"
         python -m venv $ABS_ROOT_DIR/venv
 
+        cp $ABS_ROOT_DIR/.env.example $ABS_ROOT_DIR/.env
+
     case "--setup"
         python -m pip install --upgrade pip
 
