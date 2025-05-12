@@ -14,6 +14,7 @@ load_dotenv()
 userFB = FacebookApi(app_id=os.environ['APP_ID'], app_secret=os.environ['APP_SECRET_TOKEN'], access_token=os.environ['USER_ACCESS_TOKEN'])
 
 
+# TODO: Obtener el pack completo de los comentarios (no solo los principales también los heredados)
 user = userFB.user.get_info(user_id="me")
 
 
