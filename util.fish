@@ -57,7 +57,8 @@ switch $argv[1]
         pip install --upgrade \
             python-facebook-api \
             python-dotenv \
-            flask
+            flask \
+            peewee
     
     case "--run"
         python main.py

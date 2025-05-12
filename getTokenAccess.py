@@ -9,7 +9,18 @@ app = Flask(__name__)
 APP_ID = os.environ['APP_ID']
 APP_SECRET = os.environ['APP_SECRET_TOKEN']
 REDIRECT_URI = "http://localhost:5000/fb_callback"  # Reemplaza esto
-SCOPE = 'public_profile,email,pages_manage_metadata,public_profile,pages_show_list,read_insights,pages_read_user_content,pages_read_engagement,pages_manage_posts,pages_manage_engagement'  # Define los permisos que necesitas
+SCOPE = ','.join([ # Define los permisos que necesitas
+    'public_profile',
+    'email',
+    'pages_manage_engagement',
+    'pages_manage_metadata',
+    'pages_manage_posts',
+    'pages_read_engagement',
+    'pages_read_user_content',
+    'pages_show_list',
+    'public_profile',
+    'read_insights',
+])
 
 @app.route('/login/facebook')
 def facebook_login():

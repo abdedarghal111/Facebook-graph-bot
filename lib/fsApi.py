@@ -6,9 +6,9 @@ import os
 FS_API ='https://ai.factura.city/chat/fs'
 TOKEN = app_id=os.environ['FS_ACCESS_TOKEN']
 
-def esperar_respuesta_bot(chat_id, maxTries=10, awaitInterval=1, chatLength=2):
+def esperar_respuesta_bot(chat_id, maxTries=15, awaitInterval=1.5, chatLength=2):
     for _ in range(maxTries):
-        print(f'{_}')
+        print(f'{_*1.5}')
         chat = requests.get(
             f'{FS_API}/{chat_id}',
             headers={
